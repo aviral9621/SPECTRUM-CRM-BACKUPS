@@ -62,3 +62,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Supabase backup - $(date +%Y-%m-%d)"
+                    pull: true
