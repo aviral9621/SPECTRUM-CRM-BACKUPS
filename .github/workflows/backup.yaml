@@ -57,10 +57,11 @@ jobs:
         if: env.BACKUP_ENABLED == 'true'
         run: supabase db dump --db-url "$SUPABASE_DB_URL" -f $BACKUP_FOLDER/data.sql --data-only --use-copy
 
-            - name: Pull latest changes
-      if: env.BACKUP_ENABLED == 'true'
-      run: git pull --rebase --autostash
+          - name: Pull latest changes
+              if: env.BACKUP_ENABLED == 'true'
+                  run: git pull --rebase --autostash
 
+            
       - name: Commit backups
         if: env.BACKUP_ENABLED == 'true'
         uses: stefanzweifel/git-auto-commit-action@v4
