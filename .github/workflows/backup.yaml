@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *"  # Runs on 1st of every month at midnight
+
 env:
   BACKUP_ENABLED: true
 
@@ -19,7 +20,7 @@ jobs:
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       BACKUP_ENABLED: ${{ vars.BACKUP_ENABLED }}
-    
+
     steps:
       - name: Check if backups are enabled
         run: |
@@ -31,6 +32,9 @@ jobs:
       - name: Checkout repository
         if: env.BACKUP_ENABLED == 'true'
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Supabase CLI
         if: env.BACKUP_ENABLED == 'true'
@@ -57,11 +61,6 @@ jobs:
         if: env.BACKUP_ENABLED == 'true'
         run: supabase db dump --db-url "$SUPABASE_DB_URL" -f $BACKUP_FOLDER/data.sql --data-only --use-copy
 
-          - name: Pull latest changes
-              if: env.BACKUP_ENABLED == 'true'
-                  run: git pull --rebase --autostash
-
-            
       - name: Commit backups
         if: env.BACKUP_ENABLED == 'true'
         uses: stefanzweifel/git-auto-commit-action@v4
