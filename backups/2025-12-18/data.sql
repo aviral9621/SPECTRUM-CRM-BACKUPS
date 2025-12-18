@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict crNkU74chaPnnxl9ZkXYth3MzL9OnqqcxfuKM1CS1nrp59m45aAj6imJUaJ71vO
+-- \restrict NGiUmOFotKwrMrsv3aglzDskPXG9qdLfu00LDYl6xgJFzrnzYfNzBbOJk3JDDZi
 
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.6
@@ -3299,6 +3299,8 @@ COPY "auth"."audit_log_entries" ("instance_id", "id", "payload", "created_at", "
 00000000-0000-0000-0000-000000000000	8be0d22a-d4ab-4ad6-98a2-d696223cc0e2	{"action":"token_revoked","actor_id":"671b1c91-12ea-48f9-b242-14e41deb3bad","actor_name":"Aviral Singh","actor_username":"aviral469621@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-17 16:28:29.464395+00	
 00000000-0000-0000-0000-000000000000	f34aaed5-4569-43e5-8ca9-3e93bfdd94ee	{"action":"token_refreshed","actor_id":"671b1c91-12ea-48f9-b242-14e41deb3bad","actor_name":"Aviral Singh","actor_username":"aviral469621@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-17 17:26:32.196904+00	
 00000000-0000-0000-0000-000000000000	46e9edd1-b530-4edb-9ab7-27e6cf21feae	{"action":"token_revoked","actor_id":"671b1c91-12ea-48f9-b242-14e41deb3bad","actor_name":"Aviral Singh","actor_username":"aviral469621@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-17 17:26:32.213405+00	
+00000000-0000-0000-0000-000000000000	9b19ff2c-40d3-456f-88a5-be949116f10e	{"action":"token_refreshed","actor_id":"671b1c91-12ea-48f9-b242-14e41deb3bad","actor_name":"Aviral Singh","actor_username":"aviral469621@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-18 06:30:26.823117+00	
+00000000-0000-0000-0000-000000000000	455349d7-7059-4e69-87c0-9c5232c7329e	{"action":"token_revoked","actor_id":"671b1c91-12ea-48f9-b242-14e41deb3bad","actor_name":"Aviral Singh","actor_username":"aviral469621@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-18 06:30:26.83613+00	
 \.
 
 
@@ -3316,7 +3318,7 @@ COPY "auth"."flow_state" ("id", "user_id", "auth_code", "code_challenge_method",
 
 COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_password", "email_confirmed_at", "invited_at", "confirmation_token", "confirmation_sent_at", "recovery_token", "recovery_sent_at", "email_change_token_new", "email_change", "email_change_sent_at", "last_sign_in_at", "raw_app_meta_data", "raw_user_meta_data", "is_super_admin", "created_at", "updated_at", "phone", "phone_confirmed_at", "phone_change", "phone_change_token", "phone_change_sent_at", "email_change_token_current", "email_change_confirm_status", "banned_until", "reauthentication_token", "reauthentication_sent_at", "is_sso_user", "deleted_at", "is_anonymous") FROM stdin;
 00000000-0000-0000-0000-000000000000	7a6983bf-2aa5-4aeb-8371-d6193fd16523	authenticated	authenticated	tayyabakhan@gmail.com	$2a$10$N4oCoTNjDkaTe8e514Jjv.t73I.FJ1HDsw9a4P42i9wjQuo/LB2dq	2025-11-03 10:24:41.076923+00	\N		\N		\N			\N	2025-12-10 12:39:21.475029+00	{"provider": "email", "providers": ["email"]}	{"full_name": "Test Staff", "email_verified": true}	\N	2025-11-03 10:24:41.043481+00	2025-12-10 12:39:21.491102+00	\N	\N			\N		0	\N		\N	f	\N	f
-00000000-0000-0000-0000-000000000000	671b1c91-12ea-48f9-b242-14e41deb3bad	authenticated	authenticated	aviral469621@gmail.com	$2a$10$vm.RSFjNINIlUn911DVknecF38J13s/nLEPBd/fGtlnMrK2FvJx9m	2025-08-01 19:06:07.956743+00	\N		2025-08-01 19:04:55.058463+00		\N			\N	2025-12-17 15:30:54.057696+00	{"provider": "email", "providers": ["email"]}	{"sub": "671b1c91-12ea-48f9-b242-14e41deb3bad", "email": "aviral469621@gmail.com", "full_name": "Aviral Singh", "email_verified": true, "phone_verified": false}	\N	2025-08-01 19:04:54.988393+00	2025-12-17 17:26:32.253994+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	671b1c91-12ea-48f9-b242-14e41deb3bad	authenticated	authenticated	aviral469621@gmail.com	$2a$10$vm.RSFjNINIlUn911DVknecF38J13s/nLEPBd/fGtlnMrK2FvJx9m	2025-08-01 19:06:07.956743+00	\N		2025-08-01 19:04:55.058463+00		\N			\N	2025-12-17 15:30:54.057696+00	{"provider": "email", "providers": ["email"]}	{"sub": "671b1c91-12ea-48f9-b242-14e41deb3bad", "email": "aviral469621@gmail.com", "full_name": "Aviral Singh", "email_verified": true, "phone_verified": false}	\N	2025-08-01 19:04:54.988393+00	2025-12-18 06:30:26.861801+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	f1588407-7d2c-4541-92e8-0cbc0d24caa8	authenticated	authenticated	testapp@g.com	$2a$10$IsFUp60yU/rcTKkiiaE9Hugh.6CeKOKTCpbn4/H6m1OxfblNM./YO	2025-11-30 15:15:02.188782+00	\N		\N		\N			\N	2025-12-09 16:12:25.326293+00	{"provider": "email", "providers": ["email"]}	{"full_name": "Test Staff 2", "email_verified": true}	\N	2025-11-20 17:45:58.658391+00	2025-12-09 16:12:25.371525+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	aace4fbc-1ad9-4c91-ac80-0ba3a85e55c8	authenticated	authenticated	manager@gmail.com	$2a$10$rWnjGnSsjIIHz0tUs8AcGech8Bz2fFSFE.L75notCPWJDPhWjgYWi	2025-11-09 08:27:31.168737+00	\N		\N		\N			\N	2025-12-17 08:44:24.55601+00	{"provider": "email", "providers": ["email"]}	{"full_name": "Manager Testing", "email_verified": true}	\N	2025-11-09 08:27:31.141795+00	2025-12-17 10:40:32.765351+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
@@ -3360,9 +3362,9 @@ b6db998c-23f4-4921-a538-4e9b5488dd05	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-1
 5ebb32ba-248b-4773-9caa-9aeb799cda4a	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-17 13:11:13.766984+00	2025-12-17 14:08:39.393614+00	\N	aal1	\N	2025-12-17 14:08:39.393509	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.215.62	\N	\N	\N	\N	\N
 31d9cc67-6010-4643-9ea8-54d39e666db4	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-14 06:54:27.535989+00	2025-12-17 15:39:03.614582+00	\N	aal1	\N	2025-12-17 15:39:03.614479	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.215.62	\N	\N	\N	\N	\N
 22b0992f-596e-4df6-bc0c-1b96d4b24529	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-17 15:30:54.057833+00	2025-12-17 17:26:32.271709+00	\N	aal1	\N	2025-12-17 17:26:32.271581	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.215.62	\N	\N	\N	\N	\N
+d9328ae1-d822-47e7-879c-d2f025b21923	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-16 10:51:21.928027+00	2025-12-18 06:30:26.868843+00	\N	aal1	\N	2025-12-18 06:30:26.868733	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.209.48	\N	\N	\N	\N	\N
 bcd4d355-644f-438c-9aea-9fdb053743c2	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-09 15:24:57.645928+00	2025-12-09 15:24:57.645928+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.213.152	\N	\N	\N	\N	\N
 2155abfc-bad3-40cf-a614-ea46f32addef	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-09 15:32:43.643549+00	2025-12-10 12:34:34.439604+00	\N	aal1	\N	2025-12-10 12:34:34.439502	okhttp/4.12.0	49.36.213.152	\N	\N	\N	\N	\N
-d9328ae1-d822-47e7-879c-d2f025b21923	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-16 10:51:21.928027+00	2025-12-17 11:53:42.953559+00	\N	aal1	\N	2025-12-17 11:53:42.953449	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.209.48	\N	\N	\N	\N	\N
 66c7bdf6-51ec-432e-bde9-48316ca511a5	671b1c91-12ea-48f9-b242-14e41deb3bad	2025-12-16 18:05:11.004105+00	2025-12-17 12:58:35.106437+00	\N	aal1	\N	2025-12-17 12:58:35.106338	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	49.36.209.48	\N	\N	\N	\N	\N
 \.
 
@@ -3439,7 +3441,7 @@ COPY "auth"."one_time_tokens" ("id", "user_id", "token_type", "token_hash", "rel
 COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked", "created_at", "updated_at", "parent", "session_id") FROM stdin;
 00000000-0000-0000-0000-000000000000	1689	4igeglncawxw	671b1c91-12ea-48f9-b242-14e41deb3bad	f	2025-12-17 13:59:20.488222+00	2025-12-17 13:59:20.488222+00	\N	b6db998c-23f4-4921-a538-4e9b5488dd05
 00000000-0000-0000-0000-000000000000	1693	ivglwo54bqre	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 16:28:29.483581+00	2025-12-17 17:26:32.218448+00	t76fhjrflpqn	22b0992f-596e-4df6-bc0c-1b96d4b24529
-00000000-0000-0000-0000-000000000000	1679	3syvjo2em5ap	671b1c91-12ea-48f9-b242-14e41deb3bad	f	2025-12-17 11:53:42.94753+00	2025-12-17 11:53:42.94753+00	tnz6vzv4vapr	d9328ae1-d822-47e7-879c-d2f025b21923
+00000000-0000-0000-0000-000000000000	1679	3syvjo2em5ap	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 11:53:42.94753+00	2025-12-18 06:30:26.841815+00	tnz6vzv4vapr	d9328ae1-d822-47e7-879c-d2f025b21923
 00000000-0000-0000-0000-000000000000	1678	ioqptfdxv7xe	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 11:53:32.596202+00	2025-12-17 12:58:35.094167+00	dllkn5xeaev2	66c7bdf6-51ec-432e-bde9-48316ca511a5
 00000000-0000-0000-0000-000000000000	1581	ulgbfezqz5xv	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-09 17:34:56.201851+00	2025-12-10 12:34:34.358492+00	65nv66aswgic	2155abfc-bad3-40cf-a614-ea46f32addef
 00000000-0000-0000-0000-000000000000	1683	xmk3qlilzrz7	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 12:19:09.134476+00	2025-12-17 13:46:42.550132+00	6s4eccnzriql	31d9cc67-6010-4643-9ea8-54d39e666db4
@@ -3451,6 +3453,7 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	1654	7gtluk66os7y	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 06:58:20.340027+00	2025-12-17 08:02:29.024257+00	lfenzudwxnqx	66c7bdf6-51ec-432e-bde9-48316ca511a5
 00000000-0000-0000-0000-000000000000	1667	qnkis56nfjrc	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 08:59:40.113617+00	2025-12-17 09:57:33.335636+00	x4sk5eddeqnj	66c7bdf6-51ec-432e-bde9-48316ca511a5
 00000000-0000-0000-0000-000000000000	1691	t76fhjrflpqn	671b1c91-12ea-48f9-b242-14e41deb3bad	t	2025-12-17 15:30:54.095385+00	2025-12-17 16:28:29.466947+00	\N	22b0992f-596e-4df6-bc0c-1b96d4b24529
+00000000-0000-0000-0000-000000000000	1695	bdxkunznmzvl	671b1c91-12ea-48f9-b242-14e41deb3bad	f	2025-12-18 06:30:26.853746+00	2025-12-18 06:30:26.853746+00	3syvjo2em5ap	d9328ae1-d822-47e7-879c-d2f025b21923
 00000000-0000-0000-0000-000000000000	1685	r7bc6cx7gyyy	671b1c91-12ea-48f9-b242-14e41deb3bad	f	2025-12-17 12:58:35.100503+00	2025-12-17 12:58:35.100503+00	ioqptfdxv7xe	66c7bdf6-51ec-432e-bde9-48316ca511a5
 00000000-0000-0000-0000-000000000000	1595	h7zzrv5gqub3	671b1c91-12ea-48f9-b242-14e41deb3bad	f	2025-12-10 12:34:34.379267+00	2025-12-10 12:34:34.379267+00	ulgbfezqz5xv	2155abfc-bad3-40cf-a614-ea46f32addef
 00000000-0000-0000-0000-000000000000	1570	iepx7ohpqgmt	671b1c91-12ea-48f9-b242-14e41deb3bad	f	2025-12-09 15:24:57.658153+00	2025-12-09 15:24:57.658153+00	\N	bcd4d355-644f-438c-9aea-9fdb053743c2
@@ -4878,7 +4881,7 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1694, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1695, true);
 
 
 --
@@ -4906,6 +4909,6 @@ SELECT pg_catalog.setval('"public"."invoice_sequences_id_seq"', 1, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict crNkU74chaPnnxl9ZkXYth3MzL9OnqqcxfuKM1CS1nrp59m45aAj6imJUaJ71vO
+-- \unrestrict NGiUmOFotKwrMrsv3aglzDskPXG9qdLfu00LDYl6xgJFzrnzYfNzBbOJk3JDDZi
 
 RESET ALL;
